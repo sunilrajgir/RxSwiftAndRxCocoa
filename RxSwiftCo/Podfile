@@ -3,6 +3,6 @@
 use_frameworks!
 target 'RxSwiftCo' do
     pod 'RxSwift', '5.0.1'
-    # pod 'RxCocoa', '5.0.1'
+    pod 'RxCocoa', '5.0.1'
 
 end

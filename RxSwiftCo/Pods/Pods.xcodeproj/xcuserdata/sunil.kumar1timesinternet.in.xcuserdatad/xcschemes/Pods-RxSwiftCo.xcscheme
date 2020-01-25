@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2D53B4F2A7C77576AD4320FE8793121"
+               BlueprintIdentifier = "9662D4B399E79A7042D382A41AEEEDC7"
                BuildableName = "Pods_RxSwiftCo.framework"
                BlueprintName = "Pods-RxSwiftCo"
                ReferencedContainer = "container:Pods.xcodeproj">

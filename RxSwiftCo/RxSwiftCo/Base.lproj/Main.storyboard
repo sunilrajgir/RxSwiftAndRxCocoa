@@ -15,24 +15,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-UC-VHY">
-                                <rect key="frame" x="20" y="88" width="374" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPA-6r-DMi">
+                                <rect key="frame" x="107" y="425" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Wdw-1h-mm9"/>
+                                    <constraint firstAttribute="height" constant="100" id="rUu-oD-BPS"/>
+                                </constraints>
+                                <state key="normal" title="RxSwift"/>
+                                <connections>
+                                    <action selector="rxSwiftBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNP-RX-lcz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="LGf-UC-VHY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.863839" id="0n1-c2-jn4"/>
-                            <constraint firstItem="LGf-UC-VHY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MTc-jk-Ekt"/>
-                            <constraint firstItem="LGf-UC-VHY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gX3-sc-xpz"/>
-                            <constraint firstItem="LGf-UC-VHY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="qox-mO-vbs"/>
+                            <constraint firstItem="DPA-6r-DMi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="2G9-oL-AHw"/>
+                            <constraint firstItem="DPA-6r-DMi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jT1-8S-sTc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wyu-oO-QkC"/>
-                    <connections>
-                        <outlet property="tableView" destination="LGf-UC-VHY" id="vZx-h3-SFa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

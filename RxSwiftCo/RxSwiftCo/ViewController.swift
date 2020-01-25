@@ -9,17 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func rxSwiftBtnAction(_ sender: UIButton) {
+        let listVc  = ListViewController(nibName: nil, bundle: nil)
+        self.navigationController?.pushViewController(listVc, animated: true)
+    }
 
 }
 
 //MARK: - View Controller Life Cycle
+extension ViewController {
+    
+}
+
+//MARK:- Rx Swift
 extension ViewController {
     
 }

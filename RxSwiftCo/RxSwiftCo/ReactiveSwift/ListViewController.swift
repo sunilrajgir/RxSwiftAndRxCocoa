@@ -14,6 +14,7 @@ class ListViewController: UIViewController {
     let tableView = UITableView()
     let sourceArray = Observable.just(Chocolate.ofEurope)
     let disposeBag = DisposeBag()
+    let countItem = UIBarButtonItem(title: "0", style: .plain, target: self, action: #selector(countAction))
 }
 
 //MARK: - View Life Cycle
@@ -21,7 +22,7 @@ extension ListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
-        self.setupTableViewData()
+        self.bindTableViewWithData()
     }
     func setupTableView() {
         self.tableView.frame = self.view.frame
@@ -29,17 +30,26 @@ extension ListViewController {
         self.tableView.tableFooterView = UIView()
         let nib = UINib(nibName: ChocolateCell.Identifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: ChocolateCell.Identifier)
+        self.navigationItem.rightBarButtonItem = countItem
+    }
+    
+    @objc func countAction() {
+        
     }
 }
 
 //MARK:- RX Method
 extension ListViewController {
-    func setupTableViewData() {
+    func bindTableViewWithData() {
         sourceArray.bind(to: tableView.rx.items(cellIdentifier: ChocolateCell.Identifier, cellType: ChocolateCell.self)) {
-          (row,chocolate, cell) in
-          cell.configureWithChocolate(chocolate: chocolate)
+            (indexPath,chocolate, cell) in
+            cell.configureWithChocolate(chocolate: chocolate)
         }
-    .disposed(by: disposeBag)
+        .disposed(by: disposeBag)
+    }
+    
+    func bindCellWithNavigationCount() {
+        
     }
 }
 

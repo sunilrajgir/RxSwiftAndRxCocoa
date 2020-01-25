@@ -13,6 +13,7 @@
 		321B630A23DC55A400666398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321B630823DC55A400666398 /* Main.storyboard */; };
 		321B630C23DC55A400666398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321B630B23DC55A400666398 /* Assets.xcassets */; };
 		321B630F23DC55A400666398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321B630D23DC55A400666398 /* LaunchScreen.storyboard */; };
+		321B631823DC594200666398 /* Chocolate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B631723DC594200666398 /* Chocolate.swift */; };
 		B8BE8F9CB896D5ACBBF6689F /* Pods_RxSwiftCo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B649E2E74130CADE236223 /* Pods_RxSwiftCo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		321B630B23DC55A400666398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		321B630E23DC55A400666398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		321B631023DC55A400666398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		321B631723DC594200666398 /* Chocolate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chocolate.swift; sourceTree = "<group>"; };
 		45016CE7B2E6085DECECE288 /* Pods-RxSwiftCo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftCo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftCo/Pods-RxSwiftCo.debug.xcconfig"; sourceTree = "<group>"; };
 		4E722B56D82E3E0C6C2233A6 /* Pods-RxSwiftCo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftCo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftCo/Pods-RxSwiftCo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 		321B630123DC55A400666398 /* RxSwiftCo */ = {
 			isa = PBXGroup;
 			children = (
+				321B631623DC57D300666398 /* ReactiveSwift */,
 				321B630223DC55A400666398 /* AppDelegate.swift */,
 				321B630423DC55A400666398 /* SceneDelegate.swift */,
 				321B630623DC55A400666398 /* ViewController.swift */,
@@ -72,6 +75,14 @@
 				321B631023DC55A400666398 /* Info.plist */,
 			);
 			path = RxSwiftCo;
+			sourceTree = "<group>";
+		};
+		321B631623DC57D300666398 /* ReactiveSwift */ = {
+			isa = PBXGroup;
+			children = (
+				321B631723DC594200666398 /* Chocolate.swift */,
+			);
+			path = ReactiveSwift;
 			sourceTree = "<group>";
 		};
 		7722BE1E5DA767974DBE6DBE /* Pods */ = {
@@ -213,6 +224,7 @@
 			files = (
 				321B630723DC55A400666398 /* ViewController.swift in Sources */,
 				321B630323DC55A400666398 /* AppDelegate.swift in Sources */,
+				321B631823DC594200666398 /* Chocolate.swift in Sources */,
 				321B630523DC55A400666398 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

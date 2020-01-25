@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,3 +19,7 @@ class ViewController: UIViewController {
 
 }
 
+//MARK: - View Controller Life Cycle
+extension ViewController {
+    
+}

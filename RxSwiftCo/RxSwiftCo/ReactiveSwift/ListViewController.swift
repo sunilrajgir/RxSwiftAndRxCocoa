@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class ListViewController: UIViewController {
     let tableView = UITableView()
@@ -17,19 +18,28 @@ class ListViewController: UIViewController {
 
 //MARK: - View Life Cycle
 extension ListViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupTableView()
+        self.setupTableViewData()
+    }
+    func setupTableView() {
         self.tableView.frame = self.view.frame
         self.view.addSubview(self.tableView)
-        self.setupTableView()
+        self.tableView.tableFooterView = UIView()
+        let nib = UINib(nibName: ChocolateCell.Identifier, bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: ChocolateCell.Identifier)
     }
-
 }
 
 //MARK:- RX Method
 extension ListViewController {
-    func setupTableView() {
-
+    func setupTableViewData() {
+        sourceArray.bind(to: tableView.rx.items(cellIdentifier: ChocolateCell.Identifier, cellType: ChocolateCell.self)) {
+          (row,chocolate, cell) in
+          cell.configureWithChocolate(chocolate: chocolate)
+        }
+    .disposed(by: disposeBag)
     }
 }
+

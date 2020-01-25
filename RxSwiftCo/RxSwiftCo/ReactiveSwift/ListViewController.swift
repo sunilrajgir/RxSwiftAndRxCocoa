@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class ListViewController: UIViewController {
     let tableView = UITableView()
+    let sourceArray = Observable.just(Chocolate.ofEurope)
+    let disposeBag = DisposeBag()
 }
 
 //MARK: - View Life Cycle
@@ -19,7 +22,14 @@ extension ListViewController {
         super.viewDidLoad()
         self.tableView.frame = self.view.frame
         self.view.addSubview(self.tableView)
+        self.setupTableView()
     }
 
+}
 
+//MARK:- RX Method
+extension ListViewController {
+    func setupTableView() {
+
+    }
 }

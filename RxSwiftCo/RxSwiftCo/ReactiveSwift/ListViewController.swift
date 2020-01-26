@@ -14,7 +14,8 @@ class ListViewController: UIViewController {
     let tableView = UITableView()
     let sourceArray = Observable.just(Chocolate.ofEurope)
     let disposeBag = DisposeBag()
-    let countItem = UIBarButtonItem(title: "0", style: .plain, target: self, action: #selector(countAction))
+    var countItem : UIBarButtonItem?
+    
 }
 
 //MARK: - View Life Cycle
@@ -30,7 +31,9 @@ extension ListViewController {
         self.tableView.tableFooterView = UIView()
         let nib = UINib(nibName: ChocolateCell.Identifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: ChocolateCell.Identifier)
+        self.countItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(countAction))
         self.navigationItem.rightBarButtonItem = countItem
+        self.setNavigationCountValue()
     }
     
     @objc func countAction() {
@@ -45,6 +48,13 @@ extension ListViewController {
             (indexPath,chocolate, cell) in
             cell.configureWithChocolate(chocolate: chocolate)
         }
+        .disposed(by: disposeBag)
+    }
+    
+    func setNavigationCountValue() {
+        CartManager.sharedInstance.cartArray.asObservable().subscribe(onNext: { [unowned self] chocolates in
+            self.countItem?.title = "\(chocolates.count)"
+        })
         .disposed(by: disposeBag)
     }
     

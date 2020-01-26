@@ -38,7 +38,8 @@ extension ListViewController {
     }
     
     @objc func countAction() {
-        
+        let viewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

@@ -19,6 +19,8 @@
 		321B632723DCA7FE00666398 /* ChocolateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B632523DCA7FE00666398 /* ChocolateCell.swift */; };
 		321B632823DCA7FE00666398 /* ChocolateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321B632623DCA7FE00666398 /* ChocolateCell.xib */; };
 		321B632A23DD8DB000666398 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B632923DD8DB000666398 /* CartManager.swift */; };
+		321B632D23DD987B00666398 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B632B23DD987B00666398 /* DetailViewController.swift */; };
+		321B632E23DD987B00666398 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321B632C23DD987B00666398 /* DetailViewController.xib */; };
 		B8BE8F9CB896D5ACBBF6689F /* Pods_RxSwiftCo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B649E2E74130CADE236223 /* Pods_RxSwiftCo.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		321B632523DCA7FE00666398 /* ChocolateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateCell.swift; sourceTree = "<group>"; };
 		321B632623DCA7FE00666398 /* ChocolateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChocolateCell.xib; sourceTree = "<group>"; };
 		321B632923DD8DB000666398 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		321B632B23DD987B00666398 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		321B632C23DD987B00666398 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		45016CE7B2E6085DECECE288 /* Pods-RxSwiftCo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftCo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftCo/Pods-RxSwiftCo.debug.xcconfig"; sourceTree = "<group>"; };
 		4E722B56D82E3E0C6C2233A6 /* Pods-RxSwiftCo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftCo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftCo/Pods-RxSwiftCo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,8 @@
 				321B632523DCA7FE00666398 /* ChocolateCell.swift */,
 				321B632623DCA7FE00666398 /* ChocolateCell.xib */,
 				321B632923DD8DB000666398 /* CartManager.swift */,
+				321B632B23DD987B00666398 /* DetailViewController.swift */,
+				321B632C23DD987B00666398 /* DetailViewController.xib */,
 			);
 			path = ReactiveSwift;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				321B630F23DC55A400666398 /* LaunchScreen.storyboard in Resources */,
+				321B632E23DD987B00666398 /* DetailViewController.xib in Resources */,
 				321B630C23DC55A400666398 /* Assets.xcassets in Resources */,
 				321B631C23DC5C2700666398 /* ListViewController.xib in Resources */,
 				321B632823DCA7FE00666398 /* ChocolateCell.xib in Resources */,
@@ -250,6 +257,7 @@
 				321B631823DC594200666398 /* Chocolate.swift in Sources */,
 				321B631B23DC5C2700666398 /* ListViewController.swift in Sources */,
 				321B630523DC55A400666398 /* SceneDelegate.swift in Sources */,
+				321B632D23DD987B00666398 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

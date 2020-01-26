@@ -24,6 +24,8 @@ extension ListViewController {
         super.viewDidLoad()
         self.setupTableView()
         self.bindTableViewWithData()
+        self.setNavigationCountValue()
+        self.bindCellWithNavigationCount()
     }
     func setupTableView() {
         self.tableView.frame = self.view.frame
@@ -33,7 +35,6 @@ extension ListViewController {
         self.tableView.register(nib, forCellReuseIdentifier: ChocolateCell.Identifier)
         self.countItem = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(countAction))
         self.navigationItem.rightBarButtonItem = countItem
-        self.setNavigationCountValue()
     }
     
     @objc func countAction() {
@@ -59,7 +60,11 @@ extension ListViewController {
     }
     
     func bindCellWithNavigationCount() {
-        
+        tableView.rx.modelSelected(Chocolate.self).subscribe(onNext: {(chocolate) in
+            let newValues = CartManager.sharedInstance.cartArray.value + [chocolate]
+            CartManager.sharedInstance.cartArray.accept(newValues)
+        })
+        .disposed(by: disposeBag)
     }
 }
 
